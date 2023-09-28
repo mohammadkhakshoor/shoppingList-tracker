@@ -1,0 +1,15 @@
+import React from "react";
+
+const AddToList = () => {
+  return (
+    <button
+      // onClick={submit}
+      type="submit"
+      className="bg-red-300  self-center rounded-md px-8 py-2  w-72 hover:w-full transition-all duration-300 tracking-[3px] hover:tracking-normal shadow-xl hover:shadow-md hover:text-white hover:bg-gradient-to-b from-purple-500 to-purple-800"
+    >
+      Add To List
+    </button>
+  );
+};
+
+export default AddToList;
