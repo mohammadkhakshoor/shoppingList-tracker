@@ -128,7 +128,9 @@ export default function App() {
       </div>
       <div className=" bg-black h-screen w-screen absolute top-0 left-0  lg:hidden flex items-center justify-center ">
         <p className="text-white text-center font-mono underline underline-offset-2">
-          This project is not responsive yet <br /> please check it with PC
+          <a href="https://github.com/mohammadkhakshoor/shoppingList-tracker">
+            This project is not responsive yet <br /> please check it with PC
+          </a>
         </p>
       </div>
     </>
