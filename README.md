@@ -1,8 +1,28 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Shopping List Tracker
 
-Currently, two official plugins are available:
+This is an app for tracking the goods you buy, letting you see what goods you've purchased and how much money you've spent on them. You can also specify the quantity of each item and determine whether these goods need a fridge or not.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Live version:
+## *[mkh-shoppinglist-tracker.netlify.app](https://mkh-shoppinglist-tracker.netlify.app/)*
+
+
+## Implemented Features:
+
+- **Store items in the local storage for tracking purposes.**
+- **Sort all items by:**
+    - Quantity of the goods
+    - Price of the goods
+- **Filter items by:**
+    - Name of each item
+    - Type of product
+- Form validation using **Yup** and **Formik**
+
+
+
+## Tech Stack
+
+**React, Tailwind CSS, Yup, Formik, Vite**
+
+
+
