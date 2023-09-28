@@ -16,8 +16,8 @@ const FilterProducts = ({
     >
       {(props) => (
         <Form>
-          <div className="flex  justify-center gap-9">
-            <div>
+          <div className="flex  justify-center  lg:p-5 lg:gap-9 max-lg:gap-2 items-center max-sm:grid max-sm:grid-cols-2 max-sm:justify-items-center">
+            <div className=" col-span-2  max-sm:self-center">
               <label className=" font-black mr-2" htmlFor="filterTerm">
                 Filter by name:
               </label>
@@ -32,12 +32,12 @@ const FilterProducts = ({
               />
               <ErrorMessage name="filterTerm" />
             </div>
-            <div>
-              <label className=" font-black mr-2" htmlFor="FilterBy">
-                Filter by :
+            <div className="flex items-center gap-1">
+              <label className="  lg:font-black lg:mr-2 " htmlFor="FilterBy">
+                Filter by
               </label>
               <Field
-                className="input"
+                className="input flex-shrink"
                 as="select"
                 name="FilterBy"
                 onChange={(e) => {
@@ -57,9 +57,9 @@ const FilterProducts = ({
               {/* <ErrorMessage name="filterTerm" /> */}
               {/* <button type="submit">sub</button> */}
             </div>
-            <div>
-              <label className=" font-black mr-2" htmlFor="sortBy">
-                Sort by :
+            <div className="flex items-center gap-1">
+              <label className=" lg:font-black lg:mr-2" htmlFor="sortBy">
+                Sort by
               </label>
               <Field
                 className="input"

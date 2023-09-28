@@ -21,15 +21,15 @@ const ProductShowCard = ({ items, setItems, filterTerm, sortBy, filterBy }) => {
   };
 
   return result.length !== 0 ? (
-    <div className="  grid  grid-cols-4 gap-4 max-sm:grid-cols-1 hexa-back p-4 rounded-md">
+    <div className="  grid  grid-cols-4 lg:gap-4 gap-[0.5rem]  max-sm:grid-cols-2 max-lg:grid-cols-3 hexa-back lg:p-4 p-[0.5rem] rounded-md ">
       {result.map((i) => {
         return (
           <div
             key={i.id}
-            className="   bg-bgCard rounded-md text-textGray px-4 py-6 flex gap-6 justify-between"
+            className="   bg-bgCard rounded-md text-textGray px-4 py-6 flex gap-6 justify-between "
           >
             <div className="  flex flex-col gap-2">
-              <h2 className="  text-3xl font-mono text-purple-300">
+              <h2 className="  lg:text-3xl text-2xl font-mono text-purple-300">
                 {" "}
                 {i.productName}
               </h2>

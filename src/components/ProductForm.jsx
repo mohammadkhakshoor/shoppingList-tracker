@@ -32,7 +32,7 @@ function ProductForm({ items, setItems, typesOfProducts }) {
   //   });
 
   return (
-    <div className="flex flex-col gap-3">
+    <div className="flex flex-col gap-3  ">
       <Formik
         initialValues={{
           productName: "",
@@ -46,10 +46,10 @@ function ProductForm({ items, setItems, typesOfProducts }) {
       >
         {(props) => (
           <div className="form-style relative">
-            <GithubRepo />
+            {/* <GithubRepo /> */}
             <Form className="flex flex-col gap-4">
-              <div className="flex gap-4">
-                <div className="flex flex-col">
+              <div className="flex lg:gap-4 max-lg:gap-x-2 max-lg:gap-y-2 max-lg:grid max-lg:grid-cols-3 ">
+                <div className="flex flex-col col-span-2">
                   <label className=" font-black mb-2" htmlFor="productName">
                     product name
                   </label>

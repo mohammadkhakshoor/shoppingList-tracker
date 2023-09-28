@@ -89,9 +89,10 @@ const x = [
 ];
 
 export default function App() {
-  const [items, setItems] = useState(
-    JSON.parse(localStorage.getItem("items")) || []
-  ); ////////////// ** here you can use x as testing values
+  const [items, setItems] = useState(x); ////////////// ** here you can use x as testing values
+  // const [items, setItems] = useState(
+  //   JSON.parse(localStorage.getItem("items")) || []
+  // );
   const [filterTerm, setFilterTerm] = useState("");
   const [sortBy, setSortBy] = useState("");
   const [filterBy, setFilterBy] = useState("nothing");
@@ -102,13 +103,15 @@ export default function App() {
 
   return (
     <>
-      <div className="max-lg:hidden flex flex-col gap-4 p-5">
-        <ProductForm
-          items={items}
-          setItems={setItems}
-          typesOfProducts={typesOfProducts}
-        />
-        <div className="max-lg:hidden bg-red-300 p-4 rounded-md ">
+      <div className=" flex flex-col gap-4 lg:p-5 max-lg:p-1   h-screen max-sm:flex-col-reverse ">
+        <div className="  ">
+          <ProductForm
+            items={items}
+            setItems={setItems}
+            typesOfProducts={typesOfProducts}
+          />
+        </div>
+        <div className=" bg-red-300 lg:sp-4 max-lg:p-2 rounded-md   ">
           <FilterProducts
             setFilterTerm={setFilterTerm}
             setSortBy={setSortBy}
@@ -116,7 +119,7 @@ export default function App() {
             typesOfProducts={typesOfProducts}
           />
         </div>
-        <div className="max-lg:hidden flex gap-5 flex-wrap justify-center overflow-y-scroll scrollbar-hide  max-h-[35rem]  p-10">
+        <div className=" flex gap-5 flex-wrap justify-center overflow-y-scroll scrollbar-hide   p-2 lg:p-10 ">
           <ProductShowCard
             items={items}
             setItems={setItems}
@@ -126,13 +129,9 @@ export default function App() {
           />
         </div>
       </div>
-      <div className=" bg-black h-screen w-screen absolute top-0 left-0  lg:hidden flex items-center justify-center ">
-        <p className="text-white text-center font-mono underline underline-offset-2">
-          <a href="https://github.com/mohammadkhakshoor/shoppingList-tracker">
-            This project is not responsive yet <br /> please check it with PC
-          </a>
-        </p>
-      </div>
+      {/* <div className=" bg-black h-screen w-screen absolute top-0 left-0  lg:hidden flex items-center justify-center ">
+         
+      </div> */}
     </>
   );
 }
