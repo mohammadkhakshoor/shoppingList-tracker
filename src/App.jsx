@@ -89,7 +89,9 @@ const x = [
 ];
 
 export default function App() {
-  const [items, setItems] = useState(JSON.parse(localStorage.getItem("items"))); ////////////// ** here you can use x as testing values
+  const [items, setItems] = useState(
+    JSON.parse(localStorage.getItem("items")) || []
+  ); ////////////// ** here you can use x as testing values
   const [filterTerm, setFilterTerm] = useState("");
   const [sortBy, setSortBy] = useState("");
   const [filterBy, setFilterBy] = useState("nothing");
