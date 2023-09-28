@@ -2,6 +2,7 @@ import React from "react";
 import AddToList from "./AddToList";
 import { validation } from "./validationSchema";
 import { Formik, Field, Form, ErrorMessage } from "formik";
+import GithubRepo from "./GithubRepo";
 
 function ProductForm({ items, setItems, typesOfProducts }) {
   function onSubmit(values, actions) {
@@ -44,7 +45,8 @@ function ProductForm({ items, setItems, typesOfProducts }) {
         onSubmit={onSubmit}
       >
         {(props) => (
-          <div className="form-style">
+          <div className="form-style relative">
+            <GithubRepo />
             <Form className="flex flex-col gap-4">
               <div className="flex gap-4">
                 <div className="flex flex-col">
