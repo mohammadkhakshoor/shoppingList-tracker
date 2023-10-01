@@ -26,7 +26,7 @@ const ProductShowCard = ({ items, setItems, filterTerm, sortBy, filterBy }) => {
         return (
           <div
             key={i.id}
-            className="   bg-bgCard rounded-md text-textGray px-4 py-6 flex gap-6 justify-between "
+            className="   bg-bgCard rounded-md text-textGray p-2 lg:px-4 lg:py-6 flex gap-2 justify-between "
           >
             <div className="  flex flex-col gap-2">
               <h2 className="  lg:text-3xl text-2xl font-mono text-purple-300">

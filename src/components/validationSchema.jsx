@@ -2,7 +2,7 @@ import * as yup from "yup";
 export const validation = yup.object().shape({
   productName: yup
     .string()
-    .max(20, "it is too long!")
+    .max(13, "⛔ it is too long!")
     .matches(/^[a-zA-Z\s]+$/, {
       message: "⛔ you need to type only english letters",
     })
