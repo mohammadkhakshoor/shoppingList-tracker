@@ -20,7 +20,7 @@ body {
 
 @layer utilities {
   .input {
-    @apply p-1 rounded-md  focus:outline focus:outline-2  focus:outline-purple-900;
+    @apply p-1 rounded-md  focus:outline focus:outline-2 border bg-red-200  focus:outline-red-300;
   }
   .form-style {
     @apply flex gap-8 rounded-md lg:pt-6 lg:pb-4 lg:px-4 p-2 mb-1 flex-wrap justify-center;

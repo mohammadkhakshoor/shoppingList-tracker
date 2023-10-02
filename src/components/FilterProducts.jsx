@@ -1,5 +1,6 @@
 import React from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik";
+import { searchIcon, filterIcon, sortIcon } from "../assets/images";
 
 const FilterProducts = ({
   setFilterTerm,
@@ -16,13 +17,13 @@ const FilterProducts = ({
     >
       {(props) => (
         <Form>
-          <div className="flex   justify-center  lg:p-5 lg:gap-9 max-lg:gap-2 items-center max-sm:grid max-sm:grid-cols-2 max-sm:justify-items-center">
-            <div className=" col-span-2  max-sm:self-center">
-              <label className=" font-black mr-2" htmlFor="filterTerm">
-                Filter by name:
+          <div className="flex   justify-center  lg:p-5 lg:gap-9 max-lg:gap-x-6 max-lg:gap-y-2  max-sm:grid max-sm:grid-cols-2  ">
+            <div className=" col-span-2  max-sm:self-center flex max-sm:justify-self-auto max-sm:w-[90%] max-sm:mr-auto max-sm:ml-auto">
+              <label className=" " htmlFor="filterTerm">
+                <img className=" h-8  w-8" src={searchIcon} alt="search icon" />
               </label>
               <Field
-                className="input"
+                className="input w-full"
                 type="text"
                 name="filterTerm"
                 onChange={(e) => {
@@ -32,9 +33,13 @@ const FilterProducts = ({
               />
               <ErrorMessage name="filterTerm" />
             </div>
-            <div className="flex items-center gap-1">
-              <label className="  lg:font-black lg:mr-2 " htmlFor="FilterBy">
-                Filter by
+            <div className="flex items-center lg:gap-1 max-lg:gap-[2px] max-sm:justify-self-center">
+              <label className="  lg:font-black  " htmlFor="FilterBy">
+                <img
+                  className=" h-6  w-6 "
+                  src={filterIcon}
+                  alt="filter icon"
+                />
               </label>
               <Field
                 className="input flex-shrink"
@@ -57,9 +62,13 @@ const FilterProducts = ({
               {/* <ErrorMessage name="filterTerm" /> */}
               {/* <button type="submit">sub</button> */}
             </div>
-            <div className="flex items-center gap-1">
-              <label className=" lg:font-black lg:mr-2" htmlFor="sortBy">
-                Sort by
+            <div className="flex items-center lg:gap-1 max-lg:gap-[2px] max-sm:justify-self-center">
+              <label className=" lg:font-black " htmlFor="sortBy">
+                <img
+                  className=" h-6  w-6 block"
+                  src={sortIcon}
+                  alt="sort icon"
+                />
               </label>
               <Field
                 className="input"

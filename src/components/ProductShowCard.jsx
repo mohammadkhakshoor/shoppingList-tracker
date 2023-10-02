@@ -26,7 +26,7 @@ const ProductShowCard = ({ items, setItems, filterTerm, sortBy, filterBy }) => {
         return (
           <div
             key={i.id}
-            className="    glassmorphismCard rounded-md  p-2 lg:px-4 lg:py-6 flex gap-2 justify-between "
+            className="    glassmorphismCard rounded-md  p-2 lg:p-4 flex max-sm:gap-1 gap-2 justify-between "
           >
             <div className="  flex flex-col gap-2">
               <h2 className="  lg:text-2xl  font-bold text-2xl">
@@ -65,7 +65,7 @@ const ProductShowCard = ({ items, setItems, filterTerm, sortBy, filterBy }) => {
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
                 stroke="#AA1945"
-                className="  w-6 h-6"
+                className="  w-6 h-6    relative top-1"
               >
                 <path
                   strokeLinecap="round"
