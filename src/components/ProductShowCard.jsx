@@ -21,42 +21,44 @@ const ProductShowCard = ({ items, setItems, filterTerm, sortBy, filterBy }) => {
   };
 
   return result.length !== 0 ? (
-    <div className="  grid  grid-cols-4 lg:gap-4 gap-[0.5rem]  max-sm:grid-cols-2 max-lg:grid-cols-3 glassmorphism hexa-back lg:p-4 p-[0.5rem] rounded-md ">
+    <div className="  grid  grid-cols-4 gap-4   max-sm:grid-cols-1 max-lg:grid-cols-2 max-xl:grid-cols-3 glassmorphism hexa-back p-4  rounded-md ">
       {result.map((i) => {
         return (
           <div
             key={i.id}
-            className="    glassmorphismCard rounded-md  p-2 lg:p-4 flex max-sm:gap-1 gap-2 justify-between "
+            className="    glassmorphismCard rounded-md  p-4 lg:p-4 flex max-sm:gap-1 gap-2 justify-between "
           >
             <div className="  flex flex-col gap-2">
               <h2 className="  lg:text-2xl  font-bold text-2xl">
                 {" "}
                 {i.productName}
               </h2>
-              <p>
-                <span className="  text-[0.9rem] font-bold tracking-wider">
-                  type :{" "}
-                </span>
-                {i.productType}
-              </p>
-              <p>
-                <span className="  text-[0.9rem] font-bold tracking-wider">
-                  amount :
-                </span>{" "}
-                {i.amount}
-              </p>
-              <p>
-                <span className="  text-[0.9rem] font-bold tracking-wider">
-                  price :
-                </span>{" "}
-                ${i.price}
-              </p>
-              <p>
-                <span className="  text-[0.9rem] font-bold tracking-wider">
-                  need fridge :
-                </span>{" "}
-                {i.needFridge}
-              </p>
+              <div className="max-lg:grid max-lg:grid-cols-2 max-lg:gap-x-3 max-lg:gap-y-[1px]">
+                <p>
+                  <span className="  text-[0.9rem] font-bold tracking-wider">
+                    type :{" "}
+                  </span>
+                  {i.productType}
+                </p>
+                <p>
+                  <span className="  text-[0.9rem] font-bold tracking-wider">
+                    amount :
+                  </span>{" "}
+                  {i.amount}
+                </p>
+                <p>
+                  <span className="  text-[0.9rem] font-bold tracking-wider">
+                    price :
+                  </span>{" "}
+                  ${i.price}
+                </p>
+                <p>
+                  <span className="  text-[0.9rem] font-bold tracking-wider">
+                    need fridge :
+                  </span>{" "}
+                  {i.needFridge}
+                </p>
+              </div>
             </div>
             <button className="   self-start" onClick={() => deleteItem(i.id)}>
               <svg
@@ -79,7 +81,7 @@ const ProductShowCard = ({ items, setItems, filterTerm, sortBy, filterBy }) => {
       })}
     </div>
   ) : (
-    <p className="  flex justify-center items-center text-3xl p-10  font-bold text-gray-900 uppercase  font  tracking-wider">
+    <p className="  flex justify-center items-center text-2xl p-10  font-bold text-gray-900 uppercase  font  tracking-wider">
       there is no item
     </p>
   );
