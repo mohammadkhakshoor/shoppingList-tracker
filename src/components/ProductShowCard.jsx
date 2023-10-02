@@ -79,7 +79,7 @@ const ProductShowCard = ({ items, setItems, filterTerm, sortBy, filterBy }) => {
       })}
     </div>
   ) : (
-    <p className="  flex justify-center items-center text-4xl text-white capitalize  font  tracking-wider">
+    <p className="  flex justify-center items-center text-3xl p-10  font-bold text-gray-900 uppercase  font  tracking-wider">
       there is no item
     </p>
   );
