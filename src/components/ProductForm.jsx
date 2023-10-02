@@ -50,14 +50,20 @@ function ProductForm({ items, setItems, typesOfProducts }) {
             <Form className="flex flex-col gap-4">
               <div className="flex lg:gap-4 max-lg:gap-x-2 max-lg:gap-y-2 max-lg:grid max-lg:grid-cols-3 ">
                 <div className="flex flex-col col-span-2">
-                  <label className=" font-black mb-2" htmlFor="productName">
+                  <label
+                    className=" font-black leading-none mb-[5px]"
+                    htmlFor="productName"
+                  >
                     product name
                   </label>
                   <Field className="input" name="productName" type="text" />
                   <ErrorMessage name="productName" />
                 </div>
                 <div className="flex flex-col">
-                  <label className=" font-black mb-2" htmlFor="productType">
+                  <label
+                    className=" font-black leading-none mb-[5px]"
+                    htmlFor="productType"
+                  >
                     type
                   </label>
                   <Field className="input" name="productType" as="select">
@@ -75,21 +81,30 @@ function ProductForm({ items, setItems, typesOfProducts }) {
                   <ErrorMessage name="productType" />
                 </div>
                 <div className="flex flex-col">
-                  <label className=" font-black mb-2" htmlFor="amount">
+                  <label
+                    className=" font-black leading-none mb-[5px]"
+                    htmlFor="amount"
+                  >
                     Amount
                   </label>
                   <Field className="input" name="amount" type="text" />
                   <ErrorMessage name="amount" />
                 </div>
                 <div className="flex flex-col">
-                  <label className=" font-black mb-2" htmlFor="price">
+                  <label
+                    className=" font-black leading-none mb-[5px]"
+                    htmlFor="price"
+                  >
                     Price
                   </label>
                   <Field className="input" name="price" type="text" />
                   <ErrorMessage name="price" />
                 </div>
                 <div className="flex flex-col">
-                  <label className=" font-black mb-2" htmlFor="needFridge">
+                  <label
+                    className=" font-black leading-none mb-[5px]"
+                    htmlFor="needFridge"
+                  >
                     need fridge
                   </label>
                   <Field className="input" name="needFridge" as="select">

@@ -103,7 +103,7 @@ export default function App() {
 
   return (
     <>
-      <div className=" flex flex-col gap-4 lg:p-5 max-lg:p-1   dvh max-sm:flex-col-reverse ">
+      <div className=" flex flex-col gap-4 lg:p-5  p-3   dvh max-sm:flex-col-reverse ">
         <div className="  ">
           <ProductForm
             items={items}
