@@ -21,38 +21,38 @@ const ProductShowCard = ({ items, setItems, filterTerm, sortBy, filterBy }) => {
   };
 
   return result.length !== 0 ? (
-    <div className="  grid  grid-cols-4 lg:gap-4 gap-[0.5rem]  max-sm:grid-cols-2 max-lg:grid-cols-3 hexa-back lg:p-4 p-[0.5rem] rounded-md ">
+    <div className="  grid  grid-cols-4 lg:gap-4 gap-[0.5rem]  max-sm:grid-cols-2 max-lg:grid-cols-3 glassmorphism hexa-back lg:p-4 p-[0.5rem] rounded-md ">
       {result.map((i) => {
         return (
           <div
             key={i.id}
-            className="   bg-bgCard rounded-md text-textGray p-2 lg:px-4 lg:py-6 flex gap-2 justify-between "
+            className="    glassmorphismCard rounded-md  p-2 lg:px-4 lg:py-6 flex gap-2 justify-between "
           >
             <div className="  flex flex-col gap-2">
-              <h2 className="  lg:text-3xl text-2xl font-mono text-purple-300">
+              <h2 className="  lg:text-2xl  font-bold text-2xl">
                 {" "}
                 {i.productName}
               </h2>
               <p>
-                <span className="  text-white font-bold tracking-wider">
+                <span className="  text-[0.9rem] font-bold tracking-wider">
                   type :{" "}
                 </span>
                 {i.productType}
               </p>
               <p>
-                <span className="  text-white font-bold tracking-wider">
+                <span className="  text-[0.9rem] font-bold tracking-wider">
                   amount :
                 </span>{" "}
                 {i.amount}
               </p>
               <p>
-                <span className="  text-white font-bold tracking-wider">
+                <span className="  text-[0.9rem] font-bold tracking-wider">
                   price :
                 </span>{" "}
                 ${i.price}
               </p>
               <p>
-                <span className="  text-white font-bold tracking-wider">
+                <span className="  text-[0.9rem] font-bold tracking-wider">
                   need fridge :
                 </span>{" "}
                 {i.needFridge}
@@ -64,7 +64,7 @@ const ProductShowCard = ({ items, setItems, filterTerm, sortBy, filterBy }) => {
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
-                stroke="#db3036"
+                stroke="#AA1945"
                 className="  w-6 h-6"
               >
                 <path

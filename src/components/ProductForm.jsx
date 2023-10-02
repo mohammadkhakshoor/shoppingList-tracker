@@ -45,7 +45,7 @@ function ProductForm({ items, setItems, typesOfProducts }) {
         onSubmit={onSubmit}
       >
         {(props) => (
-          <div className="form-style relative">
+          <div className="form-style glassmorphism  relative">
             {/* <GithubRepo /> */}
             <Form className="flex flex-col gap-4">
               <div className="flex lg:gap-4 max-lg:gap-x-2 max-lg:gap-y-2 max-lg:grid max-lg:grid-cols-3 ">

@@ -4,7 +4,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        bgCard: "#2D3142",
+        bgBtn: "#fedee2",
+        bgBtnHover: "#fb6a7d",
         textGray: "#BFC0C0",
         custom: "#e5dada",
       },

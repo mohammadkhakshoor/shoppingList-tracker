@@ -111,7 +111,7 @@ export default function App() {
             typesOfProducts={typesOfProducts}
           />
         </div>
-        <div className=" bg-red-300 lg:sp-4 max-lg:p-2 rounded-md   ">
+        <div className="glassmorphism lg:sp-4 max-lg:p-2 rounded-md   ">
           <FilterProducts
             setFilterTerm={setFilterTerm}
             setSortBy={setSortBy}
