@@ -3,12 +3,9 @@ export const validation = yup.object().shape({
   productName: yup
     .string()
     .max(18, "⛔ it is too long!")
-    .matches(
-      /^[0-9A-Za-z\u00C0-\u02AF\u0370-\u1FFF\u2C00-\uD7FF\w\s\-\+\//]*$/,
-      {
-        message: "⛔ you need to type only english letters",
-      }
-    )
+    .matches(/^[A-Za-z0-9\s+\-\/]*$/, {
+      message: "⛔ you need to type only english letters",
+    })
     .required("⛔ insert the product name"),
   amount: yup
     .number()
