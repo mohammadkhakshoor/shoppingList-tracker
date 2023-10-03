@@ -61,7 +61,7 @@ const ProductShowCard = ({ items, setItems, filterTerm, sortBy, filterBy }) => {
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
-                stroke="#AA1945"
+                stroke="#cf3c61"
                 className="  w-6 h-6    relative top-1"
               >
                 <path

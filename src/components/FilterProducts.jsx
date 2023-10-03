@@ -1,12 +1,20 @@
 import React from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik";
-import { searchIcon, filterIcon, sortIcon } from "../assets/images";
+import {
+  searchIcon,
+  filterIcon,
+  sortIcon,
+  searchIconDark,
+  filterIconDark,
+  sortIconDark,
+} from "../assets/images";
 
 const FilterProducts = ({
   setFilterTerm,
   setSortBy,
   typesOfProducts,
   setFilterBy,
+  toggleTheme,
 }) => {
   return (
     <Formik
@@ -20,7 +28,11 @@ const FilterProducts = ({
           <div className="flex   justify-center  lg:p-5 lg:gap-9 max-lg:gap-x-6 max-lg:gap-y-2  max-sm:grid max-sm:grid-cols-2  ">
             <div className=" col-span-2  max-sm:self-center flex max-sm:justify-self-auto max-sm:w-[90%] max-sm:mr-auto max-sm:ml-auto">
               <label className=" " htmlFor="filterTerm">
-                <img className=" h-8  w-8" src={searchIcon} alt="search icon" />
+                <img
+                  className=" h-8  w-8"
+                  src={toggleTheme ? searchIconDark : searchIcon}
+                  alt="search icon"
+                />
               </label>
               <Field
                 className="input w-full"
@@ -37,7 +49,7 @@ const FilterProducts = ({
               <label className="  lg:font-black  " htmlFor="FilterBy">
                 <img
                   className=" h-6  w-6 "
-                  src={filterIcon}
+                  src={toggleTheme ? filterIconDark : filterIcon}
                   alt="filter icon"
                 />
               </label>
@@ -66,7 +78,7 @@ const FilterProducts = ({
               <label className=" lg:font-black " htmlFor="sortBy">
                 <img
                   className=" h-6  w-6 block"
-                  src={sortIcon}
+                  src={toggleTheme ? sortIconDark : sortIcon}
                   alt="sort icon"
                 />
               </label>

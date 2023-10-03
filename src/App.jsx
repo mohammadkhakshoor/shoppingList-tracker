@@ -4,6 +4,7 @@ import ProductShowCard from "./components/ProductShowCard";
 import FilterProducts from "./components/FilterProducts";
 import FormToggler from "./components/FormToggler";
 import useCheckWindowResize from "./Hooks/useCheckWindowResize";
+import ThemeSwitcher from "./components/ThemeSwitcher";
 
 const typesOfProducts = ["Fruit", "Beverages", "Frozen", "Household", "Care"];
 
@@ -99,6 +100,7 @@ export default function App() {
   const [filterTerm, setFilterTerm] = useState("");
   const [sortBy, setSortBy] = useState("");
   const [filterBy, setFilterBy] = useState("nothing");
+  const [toggleTheme, setToggleTheme] = useState(false);
   const [formToggler, setFormToggler] = useState(width > 640 ? true : false);
 
   useEffect(() => {
@@ -107,12 +109,12 @@ export default function App() {
 
   return (
     <>
-      <div className=" flex flex-col gap-4 lg:p-5  p-3   dvh   ">
+      <div className=" flex flex-col gap-4 lg:p-5  p-3   dvh  transition-all  duration-500 bg-cover bg-fixed overflow-hidden bg-lightMode dark:bg-darkMode font-inter  dark:text-slate-300   ">
         <div
           className={
             formToggler
-              ? "h-[15rem] overflow-visible transition-all"
-              : "  h-0 overflow-hidden transition-all"
+              ? "h-[15rem] overflow-visible transition-all  ease-out  "
+              : " ease-out  duration-700 h-0 overflow-hidden transition-all "
           }
         >
           <ProductForm
@@ -122,12 +124,13 @@ export default function App() {
             setFormToggler={setFormToggler}
           />
         </div>
-        <div className="glassmorphism lg:sp-4 max-lg:p-2 rounded-md   ">
+        <div className="glassmorphism  lg:sp-4 max-lg:p-2 rounded-md   ">
           <FilterProducts
             setFilterTerm={setFilterTerm}
             setSortBy={setSortBy}
             setFilterBy={setFilterBy}
             typesOfProducts={typesOfProducts}
+            toggleTheme={toggleTheme}
           />
         </div>
         <div className=" flex gap-5 flex-wrap justify-center overflow-y-scroll scrollbar-hide   p-2 lg:p-10 ">
@@ -142,6 +145,10 @@ export default function App() {
         <FormToggler
           formToggler={formToggler}
           setFormToggler={setFormToggler}
+        />
+        <ThemeSwitcher
+          toggleTheme={toggleTheme}
+          setToggleTheme={setToggleTheme}
         />
       </div>
     </>
