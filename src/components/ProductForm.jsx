@@ -3,29 +3,13 @@ import AddToList from "./AddToList";
 import { validation } from "./validationSchema";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import GithubRepo from "./GithubRepo";
-
-function getCurrentDimension() {
-  return {
-    width: window.innerWidth,
-    height: window.innerHeight,
-  };
-}
+import useCheckWindowResize from "../Hooks/useCheckWindowResize";
 
 function ProductForm({ items, setItems, typesOfProducts, setFormToggler }) {
-  const [screenSize, setScreenSize] = useState(getCurrentDimension());
-  useEffect(() => {
-    const updateDimension = () => {
-      setScreenSize(getCurrentDimension());
-    };
-    window.addEventListener("resize", updateDimension);
-
-    return () => {
-      window.removeEventListener("resize", updateDimension);
-    };
-  }, [screenSize]);
+  const { width, setScreenSize } = useCheckWindowResize();
   function onSubmit(values, actions) {
     actions.resetForm();
-    screenSize.width <= 640 && setFormToggler(false);
+    width <= 640 && setFormToggler(false);
     return setItems((item) => [
       ...item,
       {

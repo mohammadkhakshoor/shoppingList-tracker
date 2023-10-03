@@ -3,6 +3,7 @@ import ProductForm from "./components/ProductForm";
 import ProductShowCard from "./components/ProductShowCard";
 import FilterProducts from "./components/FilterProducts";
 import FormToggler from "./components/FormToggler";
+import useCheckWindowResize from "./Hooks/useCheckWindowResize";
 
 const typesOfProducts = ["Fruit", "Beverages", "Frozen", "Household", "Care"];
 
@@ -94,10 +95,11 @@ export default function App() {
   // const [items, setItems] = useState(
   //   JSON.parse(localStorage.getItem("items")) || []
   // );
+  const { width } = useCheckWindowResize();
   const [filterTerm, setFilterTerm] = useState("");
   const [sortBy, setSortBy] = useState("");
   const [filterBy, setFilterBy] = useState("nothing");
-  const [formToggler, setFormToggler] = useState(false);
+  const [formToggler, setFormToggler] = useState(width > 640 ? true : false);
 
   useEffect(() => {
     localStorage.setItem("items", JSON.stringify(items));

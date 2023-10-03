@@ -10,13 +10,14 @@ export const validation = yup.object().shape({
   amount: yup
     .number()
     .typeError("⛔ Only type number")
-    .max(14, "⛔ it should be less than 15")
+    .max(9999, "⛔ Invalid amount")
     .positive()
     .integer()
     .required("⛔ Required !"),
   price: yup
     .number()
     .typeError("⛔ Only type number")
+    .max(999999, "⛔ Invalid price")
     .positive()
     .integer()
     .required("⛔ Required !"),
