@@ -12,7 +12,7 @@ import {
 const FilterProducts = ({
   setFilterTerm,
   setSortBy,
-  typesOfProducts,
+  productCategories,
   setFilterBy,
   toggleTheme,
 }) => {
@@ -63,7 +63,7 @@ const FilterProducts = ({
                 }}
               >
                 <option value="nothing">No filtering</option>
-                {typesOfProducts.map((type) => {
+                {productCategories.map((type) => {
                   return (
                     <option key={type} value={type}>
                       {type}

@@ -24,7 +24,17 @@ export const validation = yup.object().shape({
   productType: yup
     .string()
     .oneOf(
-      ["Fruit", "Beverages", "Frozen", "Household", "Care"],
+      [
+        "Food and Beverages",
+        "Clothing",
+        "Health",
+        "Home & Housing",
+        "Transportation",
+        "Technology",
+        "Entertainment",
+        "Educational",
+        "Care & Beauty",
+      ],
       "invalid product type"
     )
     .required("⛔ Required !"),

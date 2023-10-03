@@ -5,7 +5,7 @@ import { Formik, Field, Form, ErrorMessage } from "formik";
 import GithubRepo from "./GithubRepo";
 import useCheckWindowResize from "../Hooks/useCheckWindowResize";
 
-function ProductForm({ items, setItems, typesOfProducts, setFormToggler }) {
+function ProductForm({ items, setItems, productCategories, setFormToggler }) {
   const { width, setScreenSize } = useCheckWindowResize();
   function onSubmit(values, actions) {
     actions.resetForm();
@@ -73,7 +73,7 @@ function ProductForm({ items, setItems, typesOfProducts, setFormToggler }) {
                     <option value="" disabled>
                       Product type
                     </option>
-                    {typesOfProducts.map((type) => {
+                    {productCategories.map((type) => {
                       return (
                         <option key={type} value={type}>
                           {type}

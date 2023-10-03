@@ -22,7 +22,7 @@ const ProductShowCard = ({ items, setItems, filterTerm, sortBy, filterBy }) => {
 
   return result.length !== 0 ? (
     <div className="  grid  grid-cols-4 gap-4   max-sm:grid-cols-1 max-lg:grid-cols-2 max-xl:grid-cols-3 glassmorphismCard  backdrop-blur-sm hexa-back p-4  rounded-md ">
-      {result.map((i) => {
+      {result.reverse().map((i) => {
         return (
           <div
             key={i.id}
