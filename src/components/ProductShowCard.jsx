@@ -76,7 +76,7 @@ const ProductShowCard = ({ items, setItems, filterTerm, sortBy, filterBy }) => {
       })}
     </div>
   ) : (
-    <p className="  flex justify-center items-center text-2xl p-10  font-bold text-gray-900 uppercase  font  tracking-wider">
+    <p className=" dark:text-gray-400  flex justify-center items-center text-2xl p-10  font-bold text-gray-900 uppercase  font  tracking-wider">
       there is no item
     </p>
   );

@@ -123,7 +123,9 @@ export default function App() {
         <div
           className={
             formToggler
-              ? "h-[15rem] overflow-visible transition-all  ease-out  "
+              ? `${
+                  width > 640 ? "" : "h-[14rem]"
+                }  overflow-visible transition-all  ease-out  `
               : " ease-out  duration-700 h-0 overflow-hidden transition-all "
           }
         >
