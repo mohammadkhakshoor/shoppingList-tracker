@@ -2,7 +2,7 @@ import React from "react";
 
 const ProductShowCard = ({ items, setItems, filterTerm, sortBy, filterBy }) => {
   const result = items
-    .filter((i) => i.productName.includes(filterTerm))
+    .filter((i) => i.productName.includes(filterTerm.toLowerCase()))
     .filter((i) => (filterBy === "nothing" ? i : i.productType === filterBy))
     .sort((a, b) => {
       if (sortBy === "No") {
@@ -31,7 +31,8 @@ const ProductShowCard = ({ items, setItems, filterTerm, sortBy, filterBy }) => {
             <div className="  flex flex-col gap-2">
               <h2 className="  lg:text-2xl  font-bold text-2xl">
                 {" "}
-                {i.productName}
+                {i.productName.at(0).toUpperCase() +
+                  i.productName.slice(1).toLowerCase()}
               </h2>
               <div className="max-lg:grid max-lg:grid-cols-2 max-lg:gap-x-3 max-lg:gap-y-[1px]">
                 <p>
