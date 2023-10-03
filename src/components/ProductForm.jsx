@@ -18,11 +18,13 @@ function ProductForm({ items, setItems, productCategories, setFormToggler }) {
         amount: values.amount,
         price: values.price,
         needFridge: values.needFridge,
-        id: items.length + 1,
+        id: crypto.randomUUID(),
       },
     ]);
   }
+  // items.length + 1,
 
+  console.log(items);
   // const { values, errors, touched, handleBlur, handleChange, submitForm } =
   //   useFormik({
   //     initialValues: {

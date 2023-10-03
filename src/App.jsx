@@ -7,7 +7,7 @@ import useCheckWindowResize from "./Hooks/useCheckWindowResize";
 import ThemeSwitcher from "./components/ThemeSwitcher";
 
 const productCategories = [
-  "Food and Beverages",
+  "Food & Drink",
   "Clothing",
   "Health",
   "Home & Housing",

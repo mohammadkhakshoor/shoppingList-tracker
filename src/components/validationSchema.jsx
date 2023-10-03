@@ -25,7 +25,7 @@ export const validation = yup.object().shape({
     .string()
     .oneOf(
       [
-        "Food and Beverages",
+        "Food & Drink",
         "Clothing",
         "Health",
         "Home & Housing",

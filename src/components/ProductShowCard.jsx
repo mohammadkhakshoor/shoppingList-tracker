@@ -2,6 +2,7 @@ import React from "react";
 
 const ProductShowCard = ({ items, setItems, filterTerm, sortBy, filterBy }) => {
   const result = items
+    .toReversed()
     .filter((i) => i.productName.includes(filterTerm.toLowerCase()))
     .filter((i) => (filterBy === "nothing" ? i : i.productType === filterBy))
     .sort((a, b) => {
@@ -22,12 +23,13 @@ const ProductShowCard = ({ items, setItems, filterTerm, sortBy, filterBy }) => {
 
   return result.length !== 0 ? (
     <div className="  grid  grid-cols-4 gap-4   max-sm:grid-cols-1 max-lg:grid-cols-2 max-xl:grid-cols-3 glassmorphismCard  backdrop-blur-sm hexa-back p-4  rounded-md ">
-      {result.reverse().map((i) => {
+      {result.map((i) => {
         return (
           <div
             key={i.id}
             className="glassmorphismCard rounded-md  p-4 lg:p-4 flex max-sm:gap-1 gap-2 justify-between "
           >
+            {console.log(i.id)}
             <div className="  flex flex-col gap-2">
               <h2 className="  lg:text-2xl  font-bold text-2xl">
                 {" "}
