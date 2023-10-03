@@ -10,7 +10,7 @@ export default {
         textGray: "#BFC0C0",
         addBtn: "#cf3c61",
         custom: "#e5dada",
-        darkInputBackground: "#444",
+        darkInputBackground: "#4444",
       },
       backgroundImage: {
         lightMode: "url('../src/assets/images/bgc-light.svg')",

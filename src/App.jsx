@@ -119,7 +119,7 @@ export default function App() {
 
   return (
     <>
-      <div className=" flex flex-col gap-4 lg:p-5  p-3   dvh  transition-all  duration-500 bg-cover bg-fixed overflow-hidden bg-lightMode dark:bg-darkMode font-inter  dark:text-slate-300   ">
+      <div className=" flex flex-col gap-4 lg:p-5  p-3   dvh  transition-all  duration-500 bg-cover bg-fixed overflow-hidden bg-lightMode dark:bg-darkMode   dark:text-slate-300   ">
         <div
           className={
             formToggler

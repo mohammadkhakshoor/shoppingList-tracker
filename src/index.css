@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Vazirmatn&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,7 +8,13 @@ body {
    background-image: url(../src/assets/images/bgc.svg); 
    background-attachment: fixed;
   background-size: cover;
-  font-family: "Inter", sans-serif; */
+  /* font-family: "Inter", sans-serif; */
+  /* font-family: , cursive; */
+  /* font-family: 'Inter', sans-serif; */
+  /* font-family: 'Baloo Bhaijaan 2', cursive;
+font-family: 'Inter', sans-serif;
+font-family: 'Vazirmatn', sans-serif; */
+  font-family: "Inter", "Vazirmatn", sans-serif;
   overflow: hidden;
 }
 
