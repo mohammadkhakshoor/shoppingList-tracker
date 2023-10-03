@@ -22,19 +22,6 @@ function ProductForm({ items, setItems, productCategories, setFormToggler }) {
       },
     ]);
   }
-  // items.length + 1,
-
-  console.log(items);
-  // const { values, errors, touched, handleBlur, handleChange, submitForm } =
-  //   useFormik({
-  //     initialValues: {
-  // productName: "",
-  // amount: "",
-  // price: "",
-  //     },
-  //     validationSchema: validation,
-  //     onSubmit,
-  //   });
 
   return (
     <div className="flex flex-col gap-3   ">

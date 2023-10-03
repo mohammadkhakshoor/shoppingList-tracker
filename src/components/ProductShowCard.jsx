@@ -29,7 +29,6 @@ const ProductShowCard = ({ items, setItems, filterTerm, sortBy, filterBy }) => {
             key={i.id}
             className="glassmorphismCard rounded-md  p-4 lg:p-4 flex max-sm:gap-1 gap-2 justify-between "
           >
-            {console.log(i.id)}
             <div className="  flex flex-col gap-2">
               <h2 className="  lg:text-2xl  font-bold text-2xl">
                 {" "}
