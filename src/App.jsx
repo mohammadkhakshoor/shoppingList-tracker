@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import ProductForm from "./components/ProductForm";
 import ProductShowCard from "./components/ProductShowCard";
 import FilterProducts from "./components/FilterProducts";
+import FormToggler from "./components/FormToggler";
 
 const typesOfProducts = ["Fruit", "Beverages", "Frozen", "Household", "Care"];
 
@@ -96,6 +97,7 @@ export default function App() {
   const [filterTerm, setFilterTerm] = useState("");
   const [sortBy, setSortBy] = useState("");
   const [filterBy, setFilterBy] = useState("nothing");
+  const [formToggler, setFormToggler] = useState(false);
 
   useEffect(() => {
     localStorage.setItem("items", JSON.stringify(items));
@@ -103,12 +105,19 @@ export default function App() {
 
   return (
     <>
-      <div className=" flex flex-col gap-4 lg:p-5  p-3   dvh  ">
-        <div className="  ">
+      <div className=" flex flex-col gap-4 lg:p-5  p-3   dvh   ">
+        <div
+          className={
+            formToggler
+              ? "h-[15rem] overflow-visible transition-all"
+              : "  h-0 overflow-hidden transition-all"
+          }
+        >
           <ProductForm
             items={items}
             setItems={setItems}
             typesOfProducts={typesOfProducts}
+            setFormToggler={setFormToggler}
           />
         </div>
         <div className="glassmorphism lg:sp-4 max-lg:p-2 rounded-md   ">
@@ -128,10 +137,11 @@ export default function App() {
             filterBy={filterBy}
           />
         </div>
+        <FormToggler
+          formToggler={formToggler}
+          setFormToggler={setFormToggler}
+        />
       </div>
-      {/* <div className=" bg-black h-screen w-screen absolute top-0 left-0  lg:hidden flex items-center justify-center ">
-         
-      </div> */}
     </>
   );
 }

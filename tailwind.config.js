@@ -7,6 +7,7 @@ export default {
         bgBtn: "#fedee2",
         bgBtnHover: "#fb6a7d",
         textGray: "#BFC0C0",
+        addBtn: "#cf3c61",
         custom: "#e5dada",
       },
     },

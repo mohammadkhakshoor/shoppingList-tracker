@@ -1,12 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import AddToList from "./AddToList";
 import { validation } from "./validationSchema";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import GithubRepo from "./GithubRepo";
 
-function ProductForm({ items, setItems, typesOfProducts }) {
+function getCurrentDimension() {
+  return {
+    width: window.innerWidth,
+    height: window.innerHeight,
+  };
+}
+
+function ProductForm({ items, setItems, typesOfProducts, setFormToggler }) {
+  const [screenSize, setScreenSize] = useState(getCurrentDimension());
+  useEffect(() => {
+    const updateDimension = () => {
+      setScreenSize(getCurrentDimension());
+    };
+    window.addEventListener("resize", updateDimension);
+
+    return () => {
+      window.removeEventListener("resize", updateDimension);
+    };
+  }, [screenSize]);
   function onSubmit(values, actions) {
     actions.resetForm();
+    screenSize.width <= 640 && setFormToggler(false);
     return setItems((item) => [
       ...item,
       {
@@ -32,7 +51,7 @@ function ProductForm({ items, setItems, typesOfProducts }) {
   //   });
 
   return (
-    <div className="flex flex-col gap-3  ">
+    <div className="flex flex-col gap-3   ">
       <Formik
         initialValues={{
           productName: "",
@@ -45,10 +64,10 @@ function ProductForm({ items, setItems, typesOfProducts }) {
         onSubmit={onSubmit}
       >
         {(props) => (
-          <div className="form-style glassmorphism  relative">
+          <div className="form-style glassmorphism  relative  ">
             {/* <GithubRepo /> */}
-            <Form className="flex flex-col gap-4">
-              <div className="flex lg:gap-4 max-lg:gap-x-2 max-lg:gap-y-2 max-lg:grid max-lg:grid-cols-3 ">
+            <Form className="flex flex-col gap-4   ">
+              <div className="flex lg:gap-4 max-lg:gap-x-2 max-lg:gap-y-2 max-lg:grid max-lg:grid-cols-3  ">
                 <div className="flex flex-col col-span-2">
                   <label
                     className=" font-black leading-none mb-[5px]"

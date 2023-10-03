@@ -26,7 +26,7 @@ const ProductShowCard = ({ items, setItems, filterTerm, sortBy, filterBy }) => {
         return (
           <div
             key={i.id}
-            className="    glassmorphismCard rounded-md  p-4 lg:p-4 flex max-sm:gap-1 gap-2 justify-between "
+            className="glassmorphismCard rounded-md  p-4 lg:p-4 flex max-sm:gap-1 gap-2 justify-between "
           >
             <div className="  flex flex-col gap-2">
               <h2 className="  lg:text-2xl  font-bold text-2xl">
@@ -35,25 +35,19 @@ const ProductShowCard = ({ items, setItems, filterTerm, sortBy, filterBy }) => {
               </h2>
               <div className="max-lg:grid max-lg:grid-cols-2 max-lg:gap-x-3 max-lg:gap-y-[1px]">
                 <p>
-                  <span className="  text-[0.9rem] font-bold tracking-wider">
-                    type :{" "}
-                  </span>
+                  <span className="  text-[0.9rem] font-bold ">type : </span>
                   {i.productType}
                 </p>
                 <p>
-                  <span className="  text-[0.9rem] font-bold tracking-wider">
-                    amount :
-                  </span>{" "}
+                  <span className="  text-[0.9rem] font-bold ">amount :</span>{" "}
                   {i.amount}
                 </p>
                 <p>
-                  <span className="  text-[0.9rem] font-bold tracking-wider">
-                    price :
-                  </span>{" "}
-                  ${i.price}
+                  <span className="  text-[0.9rem] font-bold ">price :</span> $
+                  {i.price}
                 </p>
                 <p>
-                  <span className="  text-[0.9rem] font-bold tracking-wider">
+                  <span className="  text-[0.9rem] font-bold ">
                     need fridge :
                   </span>{" "}
                   {i.needFridge}
