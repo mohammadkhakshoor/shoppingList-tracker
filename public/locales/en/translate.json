@@ -1,0 +1,26 @@
+{
+  "productName": "product name",
+  "type": "Type",
+  "amount": "Amount",
+  "price": "Price",
+  "needFridge": "Need fridge",
+  "needFridgeChoose": "Choose one",
+  "no": "No",
+  "yes": "Yes",
+  "language": "Language",
+  "persian": "Persian",
+  "english": "English",
+  "productType": "product type",
+  "productCategories": [
+    "Food & Drink",
+    "Clothing",
+    "Health",
+    "Home & Housing",
+    "Transportation",
+    "Technology",
+    "Entertainment",
+    "Educational",
+    "Care & Beauty"
+  ],
+  "AddToList": "Add to list"
+}

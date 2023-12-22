@@ -1,8 +1,9 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const ProductShowCard = ({ items, setItems, filterTerm, sortBy, filterBy }) => {
+  const { t } = useTranslation();
   const result = items
-    .toReversed()
     .filter((i) => i.productName.includes(filterTerm.toLowerCase()))
     .filter((i) => (filterBy === "nothing" ? i : i.productType === filterBy))
     .sort((a, b) => {
@@ -25,34 +26,26 @@ const ProductShowCard = ({ items, setItems, filterTerm, sortBy, filterBy }) => {
     <div className="  grid  grid-cols-4 gap-4   max-sm:grid-cols-1 max-lg:grid-cols-2 max-xl:grid-cols-3 glassmorphismCard  backdrop-blur-sm hexa-back p-4  rounded-md ">
       {result.map((i) => {
         return (
-          <div
-            key={i.id}
-            className="glassmorphismCard rounded-md  p-4 lg:p-4 flex max-sm:gap-1 gap-2 justify-between "
-          >
+          <div key={i.id} className="glassmorphismCard rounded-md  p-4 lg:p-4 flex max-sm:gap-1 gap-2 justify-between ">
             <div className="  flex flex-col gap-2">
               <h2 className="  lg:text-2xl  font-bold text-2xl">
                 {" "}
-                {i.productName.at(0).toUpperCase() +
-                  i.productName.slice(1).toLowerCase()}
+                {i.productName.at(0).toUpperCase() + i.productName.slice(1).toLowerCase()}
               </h2>
               <div className="max-lg:grid max-lg:grid-cols-2 max-lg:gap-x-3 max-lg:gap-y-[1px]">
                 <p>
-                  <span className="  text-[0.9rem] font-bold ">type : </span>
+                  <span className="  text-[0.9rem] font-bold "> {t("type")} : </span>
                   {i.productType}
                 </p>
                 <p>
-                  <span className="  text-[0.9rem] font-bold ">amount :</span>{" "}
+                  <span className="  text-[0.9rem] font-bold "> {t("amount")} :</span>
                   {i.amount}
                 </p>
                 <p>
-                  <span className="  text-[0.9rem] font-bold ">price :</span> $
-                  {i.price}
+                  <span className="  text-[0.9rem] font-bold "> {t("price")} :</span> ${i.price}
                 </p>
                 <p>
-                  <span className="  text-[0.9rem] font-bold ">
-                    need fridge :
-                  </span>{" "}
-                  {i.needFridge}
+                  <span className="  text-[0.9rem] font-bold "> {t("needFridge")} :</span> {i.needFridge}
                 </p>
               </div>
             </div>

@@ -5,107 +5,25 @@ import FilterProducts from "./components/FilterProducts";
 import FormToggler from "./components/FormToggler";
 import useCheckWindowResize from "./Hooks/useCheckWindowResize";
 import ThemeSwitcher from "./components/ThemeSwitcher";
+import "./i18n";
+import { useTranslation } from "react-i18next";
 
-const productCategories = [
-  "Food & Drink",
-  "Clothing",
-  "Health",
-  "Home & Housing",
-  "Transportation",
-  "Technology",
-  "Entertainment",
-  "Educational",
-  "Care & Beauty",
-];
-
-// const x = [
-//   {
-//     productName: "apple",
-//     amount: "5",
-//     price: "25",
-//     productType: "Fruit",
-//     needFridge: "no",
-//     id: "1",
-//   },
-//   {
-//     productName: "soda",
-//     amount: "3",
-//     price: "10",
-//     productType: "Beverages",
-//     needFridge: "no",
-//     id: "2",
-//   },
-//   {
-//     productName: "frozen pizza",
-//     amount: "1",
-//     price: "50",
-//     productType: "Frozen",
-//     needFridge: "no",
-//     id: "3",
-//   },
-//   {
-//     productName: "cleaning supplies",
-//     amount: "10",
-//     price: "75",
-//     productType: "Household",
-//     needFridge: "yes",
-//     id: "4",
-//   },
-//   {
-//     productName: "running shoes",
-//     amount: "2",
-//     price: "30",
-//     productType: "Care",
-//     needFridge: "no",
-//     id: "5",
-//   },
-//   {
-//     productName: "action figure",
-//     amount: "4",
-//     price: "15",
-//     productType: "Household",
-//     needFridge: "no",
-//     id: "6",
-//   },
-//   {
-//     productName: "sofa",
-//     amount: "1",
-//     price: "200",
-//     productType: "Household",
-//     needFridge: "no",
-//     id: "7",
-//   },
-//   {
-//     productName: "hammer",
-//     amount: "7",
-//     price: "45",
-//     productType: "Household",
-//     needFridge: "no",
-//     id: "8",
-//   },
-//   {
-//     productName: "t-shirt",
-//     amount: "3",
-//     price: "40",
-//     productType: "Care",
-//     needFridge: "no",
-//     id: "9",
-//   },
-//   {
-//     productName: "cookware set",
-//     amount: "2",
-//     price: "35",
-//     productType: "Household",
-//     needFridge: "no",
-//     id: "10",
-//   },
+// const productCategories = [
+//   "Food & Drink",
+//   "Clothing",
+//   "Health",
+//   "Home & Housing",
+//   "Transportation",
+//   "Technology",
+//   "Entertainment",
+//   "Educational",
+//   "Care & Beauty",
 // ];
 
 export default function App() {
-  // const [items, setItems] = useState(x); ////////////// ** here you can use x as testing values
-  const [items, setItems] = useState(
-    JSON.parse(localStorage.getItem("items")) || []
-  );
+  const { t } = useTranslation();
+  const productCategories = t("productCategories", { returnObjects: true });
+  const [items, setItems] = useState(JSON.parse(localStorage.getItem("items")) || []);
   const { width } = useCheckWindowResize();
   const [filterTerm, setFilterTerm] = useState("");
   const [sortBy, setSortBy] = useState("");
@@ -123,9 +41,7 @@ export default function App() {
         <div
           className={
             formToggler
-              ? `${
-                  width > 640 ? "" : "h-[14rem]"
-                }  overflow-visible transition-all  ease-out  `
+              ? `${width > 640 ? "" : "h-[14rem]"}  overflow-visible transition-all  ease-out  `
               : " ease-out  duration-700 h-0 overflow-hidden transition-all "
           }
         >
@@ -154,14 +70,8 @@ export default function App() {
             filterBy={filterBy}
           />
         </div>
-        <FormToggler
-          formToggler={formToggler}
-          setFormToggler={setFormToggler}
-        />
-        <ThemeSwitcher
-          toggleTheme={toggleTheme}
-          setToggleTheme={setToggleTheme}
-        />
+        <FormToggler formToggler={formToggler} setFormToggler={setFormToggler} />
+        <ThemeSwitcher toggleTheme={toggleTheme} setToggleTheme={setToggleTheme} />
       </div>
     </>
   );

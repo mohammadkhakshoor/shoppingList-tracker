@@ -19,7 +19,6 @@ export const validation = yup.object().shape({
     .typeError("⛔ Only type number")
     .max(999999, "⛔ Invalid price")
     .positive()
-    .integer()
     .required("⛔ Required !"),
   productType: yup
     .string()
