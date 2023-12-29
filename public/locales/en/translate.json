@@ -22,5 +22,6 @@
     "Educational",
     "Care & Beauty"
   ],
+  "sortItems": ["Amount", "Price", "No Sorting"],
   "AddToList": "Add to list"
 }
